@@ -1,68 +1,80 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container2 {
+    width: 90%;
+    margin: 0 auto;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@media (min-width: 1400px) {
+    .container2 {
+        width: 1350px;
+    }
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+input,
+select,
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button,
+select {
+    cursor: pointer;
+    appearance: none;
 }
+
+section,
+footer {
+    background: #1f2025;
+}
+
+.btn {
+    background: #fff;
+    color: #333;
+    padding: 7px 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px 0 rgba(15, 15, 15, 0.2);
+    border-radius: 8px;
+    border: 2px solid #fff;
+    transition: color 0.2s;
+    font-weight: 600;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.showcase {
+    background: url(../src/assets/img/cube.png), #1f2025;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wave {
+    background: url(../src/assets/img/wave_bg.png), #1f2025;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 110%;
+    color: #f1f1f1;
+}
+
+@media (max-width: 620px) {
+    .title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 350px) {
+    .title {
+        font-size: 19px;
+    }
+}
+
+/* 1f2025 */
